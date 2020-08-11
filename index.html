@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&family=Prompt&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body class="app">
+    <div class="container">
+        <div class="row">
+            <div class="col-6"></div>
+        </div>
+        <form id="search-form">
+            <input type="text" placeholder="Search for a city" autocomplete="off" autofocus="on" id="search-city" />
+            <input type="submit" value="Search" id="search-city-button" />
+        </form>
+
+        <button id="current-city-button">Current</button>
+        <h1></h1>
+        <div class="current">
+            <p class="today">
+                <strong class="current-city" id="current-city"> city </strong><span class="min-temp-top"
+                    id="min-temp-top">min</span>/<span class="max-temp-top" id="max-temp-top">max</span><span
+                    class="celFar"><a href="#" class="celcius">C˚</a>/<a href="#" class="fahrenheit">F˚</a></span>
+                Sunny
+            </p>
+            <p class="current-temp" id="current-temp">
+                ☀️ <strong> current </strong>
+            </p>
+            <p class="other-weather-data">
+                Precipitation: 8% Wind: <span id="wind-speed">2</span> m/sec UV Index:
+                high
+            </p>
+        </div>
+
+        <div class="week">
+            <div class="row">
+                <div class="col">
+                    Wed <br />
+                    ☀️ <br />19º / 30º
+                </div>
+                <div class="col">Thu<br />☀️<br />21º / 32º</div>
+                <div class="col">Fri<br />🌤<br />17º / 28º</div>
+                <div class="col">Sat<br />🌥<br />16º / 25º</div>
+                <div class="col">Sun<br />🌥<br />20º / 29º</div>
+            </div>
+        </div>
+    </div>
+    <script src="src/index.js"></script>
+</body>
+
+</html>
